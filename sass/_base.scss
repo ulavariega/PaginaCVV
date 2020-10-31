@@ -1,0 +1,48 @@
+//************* color variables**************//
+$color-primary: #f2f3f7;
+$color-black: #000000;
+$color-gray-light: #f0f3f7d2;
+$color-gray-dark: #ffffff7a;
+$color-blue: #2c98f0;
+$color-yellow: #f9bf3f;
+$color-green: #2fa499;
+
+//************* font variables**************//
+
+$font-primary: "Quicksand", sans-serif;
+$font-secondary: "Playfair Display", sans-serif;
+
+$content-padding: 4rem;
+$logo-width: 5vw;
+// $logo-height: 40%;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem = 10px 10px/16px = 62.5%
+}
+
+body {
+  font-family: $font-primary;
+  // color:
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(8, min-content);
+  grid-template-columns:
+    [sidebar-start]minmax(min-content, 20vw) [sidebar-end full-start] repeat(
+      8,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    )
+    [full-end];
+}
